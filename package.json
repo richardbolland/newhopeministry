@@ -1,0 +1,32 @@
+{
+  "name": "newhopeministry.co.za",
+  "version": "0.0.0",
+  "description": "## Pray. Act. Give. Influence.",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "https://github.com/commongroundchurch/newhopeministry.co.za",
+  "author": "New Hope <hello@newhopeministry.co.za>",
+  "contributors": [
+    {
+      "name": "Wayne Ashley Berry",
+      "email": "wayneashleyberry@gmail.com"
+    }
+  ],
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/commongroundchurch/newhopeministry.co.za.git"
+  },
+  "bugs": {
+    "url": "https://github.com/commongroundchurch/newhopeministry.co.za/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-csslint": "~0.2.0",
+    "grunt-contrib-jshint": "~0.8.0",
+    "time-grunt": "~0.2.9",
+    "load-grunt-tasks": "~0.3.0"
+  }
+}

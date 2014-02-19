@@ -1,5 +1,7 @@
 # New Hope Ministry
 
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+
 ## Pray. Act. Give. Influence.
 
 ### Mission
