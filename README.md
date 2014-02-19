@@ -1,7 +1,6 @@
 # New Hope
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
-
 [![Build Status](https://travis-ci.org/commongroundchurch/newhopeministry.co.za.png)](https://travis-ci.org/commongroundchurch/newhopeministry.co.za)
 
 ## Pray. Act. Give. Influence.
