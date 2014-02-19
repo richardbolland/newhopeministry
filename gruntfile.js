@@ -1,6 +1,8 @@
 (function () {
   'use strict';
 
+  console.log( require('fs').existsSync('source/index.html') );
+
   module.exports = function (grunt) {
     require('time-grunt')(grunt);
     require('load-grunt-tasks')(grunt);
@@ -12,7 +14,7 @@
           require: true
         },
       },
-      main: ['gruntfile.js']
+      main: ['gruntfile.js', 'test/**/*.js']
     });
 
     grunt.config('csslint', {
@@ -20,6 +22,13 @@
         'adjoining-classes': false
       },
       main: ['css/main.css']
+    });
+
+    grunt.config('nodeunit', {
+      main: ['test/**/*.js'],
+      options: {
+        //
+      }
     });
 
     grunt.config('clean', {
@@ -40,6 +49,6 @@
     });
 
     grunt.registerTask('default', ['test', 'clean', 'copy']);
-    grunt.registerTask('test', ['jshint', 'csslint']);
+    grunt.registerTask('test', ['jshint', 'csslint', 'nodeunit']);
   };
 }());
