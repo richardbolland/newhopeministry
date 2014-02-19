@@ -12,17 +12,34 @@
           require: true
         },
       },
-      files: ['gruntfile.js']
+      main: ['gruntfile.js']
     });
 
     grunt.config('csslint', {
       options: {
         'adjoining-classes': false
       },
-      files: ['css/main.css']
+      main: ['css/main.css']
     });
 
-    grunt.registerTask('default', ['jshint', 'csslint']);
-    grunt.registerTask('test', ['default']);
+    grunt.config('clean', {
+      main: ['distribute']
+    });
+
+    grunt.config('copy', {
+      main: {
+        files: [
+          {
+            expand : true,
+            cwd    : 'source',
+            src    : ['**', '**/.*'],
+            dest   : 'distribute'
+          }
+        ]
+      }
+    });
+
+    grunt.registerTask('default', ['test', 'clean', 'copy']);
+    grunt.registerTask('test', ['jshint', 'csslint']);
   };
 }());

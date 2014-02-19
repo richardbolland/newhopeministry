@@ -2,3 +2,12 @@ language: node_js
 node_js:
 - '0.10'
 before_install: npm install -g grunt-cli
+env:
+  global:
+  - secure: eZhsRTJvvllm/AyIB35ZKVvaqWWrJrTc/UUGULvolxmA3ggfQ/P4cYvTTDeNbW0wVJF+N1aUUg9iC4/55h65F1AB44X86SNmnaYDQ/c2HBuXiLGsZFXp20vHvtATF3ASDs/kdK6gFVmSK9IyIjGh690QywuHlYXwjQ7QPM8Oiag=
+  - secure: Tmq+mOeK8yUIzvbz7A3jM8yDX/pb33jDHWTYg0zn3xwo0Ow2mmPNJUKRH3IliF8s4ZfrKH04Io+7nA2ztdPbxp24u5AEE1iBS+K0va8fmdIAP0yxjxaZlAHRhfR0CU/69EBKrmi0PPblAeZjCz9oG3xQf2W2NCOxKSVocXBj6UU=
+  - secure: QKMX9Ddko2/leVHkYKpkaxT418y23gUoSJOUOUUORAI49Nbu2e7/cEn0II3qP4qnkv/0hiPdr/Nr+HyzTiNMSspGBJG2RaQA6Aw91xfUEnRtm1lOhZ8GZ2vQ+X0RlNiErwI+2RhKRYeP1GZV6SxbIjznul6sJKyjW3h3Xc1h2/8=
+after_success:
+  - grunt
+  - cd distribute
+  - find * -type f -exec curl -u $FTP_USER:$FTP_PASS --ftp-create-dirs -T {} ftp://$FTP_HOST/{} \;
