@@ -2,6 +2,7 @@
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 [![Build Status](https://travis-ci.org/commongroundchurch/newhopeministry.co.za.png)](https://travis-ci.org/commongroundchurch/newhopeministry.co.za)
+[![devDependency Status](https://david-dm.org/commongroundchurch/newhopeministry.co.za/dev-status.png?theme=shields.io)](https://david-dm.org/twbs/bootstrap#info=devDependencies)
 
 ## Pray. Act. Give. Influence.
 
