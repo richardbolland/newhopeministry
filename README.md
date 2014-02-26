@@ -4,6 +4,9 @@
 [![Build Status](https://travis-ci.org/commongroundchurch/newhopeministry.co.za.png)](https://travis-ci.org/commongroundchurch/newhopeministry.co.za)
 [![devDependency Status](https://david-dm.org/commongroundchurch/newhopeministry.co.za/dev-status.png?theme=shields.io)](https://david-dm.org/commongroundchurch/newhopeministry.co.za#info=devDependencies)
 
+Please read the [contributing guidelines](https://github.com/commongroundchurch/newhopeministry.co.za/blob/master/CONTRIBUTING.md)
+if you'd like to submit code.
+
 ## Pray. Act. Give. Influence.
 
 ### Mission
