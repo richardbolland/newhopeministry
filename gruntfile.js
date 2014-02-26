@@ -1,8 +1,6 @@
 (function () {
   'use strict';
 
-  console.log( require('fs').existsSync('source/index.html') );
-
   module.exports = function (grunt) {
     require('time-grunt')(grunt);
     require('load-grunt-tasks')(grunt);
@@ -48,7 +46,34 @@
       }
     });
 
+    grunt.config('connect', {
+      server: {
+        options: {
+          base: 'source',
+          open: true,
+          port: 1337,
+          livereload: true
+        }
+      }
+    });
+
+    grunt.config('watch', {
+      build: {
+        files: [
+          'source/css/*.css',
+          'source/js/*.js',
+          'source/img/*.js',
+          'source/index.html',
+        ],
+        tasks: [],
+        options: {
+          livereload: true
+        }
+      }
+    });
+
     grunt.registerTask('default', ['test', 'clean', 'copy']);
     grunt.registerTask('test', ['jshint', 'csslint', 'nodeunit']);
+    grunt.registerTask('serve', ['connect', 'watch']);
   };
 }());
